@@ -1,0 +1,149 @@
+/*
+Theme Name: Eco Nature Zone Pro
+Theme URI: https://www.themagnifico.net/products/nature-wordpress-theme
+Author: Themagnifico
+Author URI: https://www.themagnifico.net/
+Description: The Nature WordPress Theme is a premium website template meticulously crafted to support sites dedicated to eco-friendly living and sustainable practices. This versatile theme caters to a broad spectrum of applications, including green construction, energy-efficient home design, and sustainable travel. Whether you’re focused on promoting eco-conscious travel, showcasing innovative green renovations, or advocating for biodiversity and carbon neutrality, this theme provides a sophisticated platform to elevate your initiatives. Tailored for businesses and organisations engaged in nature conservation, the Nature WordPress Theme excels in presenting a wide array of topics such as sustainable landscaping, eco-friendly home improvements, and eco-tourism. The Nature WordPress Theme's retina-ready and responsive layout guarantees that your website will maintain its stunning visual appeal across all devices, from desktops to smartphones. This not only enhances the user experience but also ensures accessibility, making it easier for visitors to engage with your content and learn about your eco-friendly mission.
+Version: 0.0.2
+Requires at least: 5.0
+Tested up to: 6.1
+Requires PHP: 5.2.4
+License: GNU General Public License v3 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Text Domain: eco-nature-zone-pro
+Tags: one-column, right-sidebar, custom-menu, editor-style, featured-images, full-width-template, sticky-post, theme-options, threaded-comments
+Eco Nature Zone Pro WordPress Theme has been created by Themagnifico(themagnifico.net), 2024.
+Eco Nature Zone Pro WordPress Theme is released under the terms of GNU GPL
+
+/* Basic Style */
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica+SC&display=swap');
+
+.bypostauthor {
+  font-weight: 600;
+}
+/*--------- Site Loader --------------*/
+.preloader {
+  background: #EEA71E;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  position: fixed;
+  z-index: 99999;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 100000000;
+	.overlayDoor {
+		&:before, &:after {
+			content: "";
+			position: absolute;
+			width: 50%;
+			height: 100%;
+			background: #EEA71E;
+			transition: .5s cubic-bezier(.77,0,.18,1);
+			transition-delay: .8s;
+		}
+		&:before {
+			left: 0;
+		}
+		&:after {
+			right: 0;
+		}
+	}
+	&.loaded {
+		.overlayDoor {
+			&:before {
+				left: -50%;
+			}
+			&:after {
+				right: -50%;
+			}
+		}
+		.overlayContent {
+			opacity: 0;
+			margin-top: -15px;
+		}
+	}
+	.overlayContent {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		transition: .5s cubic-bezier(.77,0,.18,1);
+		.skip {
+			display: block;
+			width: 130px;
+			text-align: center;
+			margin: 50px auto 0;
+			cursor: pointer;
+			color: #fff;
+			font-family: 'Nunito';
+			font-weight: 700;
+			padding: 12px 0;
+			border: 2px solid #fff;
+			border-radius: 3px;
+			transition: 0.2s ease;
+			&:hover {
+				background: #ddd;
+				color: #444;
+				border-color: #ddd;
+			}
+		}
+	}
+}
+.loader {
+  width: 90px;
+  height: 90px;
+	border: 3px solid #fff;
+	border-bottom: 3px solid transparent;
+	border-radius: 50%;
+	position: relative;
+	animation: spin 1s linear infinite;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	.inner {
+		width: 64px;
+		height: 64px;
+		border: 3px solid transparent;
+		border-top: 3px solid #fff;
+		border-radius: 50%;
+		animation: spinInner 1s linear infinite;
+	}
+}
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+@keyframes spinInner {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(-720deg);
+	}
+}
+
+
+
+
+
